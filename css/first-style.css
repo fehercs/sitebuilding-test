@@ -1,11 +1,33 @@
+:root {
+  --span-color: blue;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 20px;
+  border: black dotted 5px;
 }
 
-.item1 {
-  grid-area: 1 / 1 / 1 / 2;
+.grid-item1 {
+  grid-row: span 2;
+  background-color: var(--span-color);
+}
+
+.grid-item3 {
+  grid-column: span 3;
+  background-color: var(--span-color);
+}
+
+.grid-item10 {
+  grid-column: span 3;
+  grid-row: span 3;
+  background-color: var(--span-color);
+}
+
+.grid-item15 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: var(--span-color);
 }
 
 .name { 
